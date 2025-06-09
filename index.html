@@ -86,19 +86,26 @@
       font-weight: 600;
       font-size: 1rem;
       margin: 0.75rem 0;
-      transition: 0.3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
       box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
       user-select: none;
     }
 
-    .button:hover {
+    body.dark .button {
       background-color: var(--gold-hover);
+      color: #000;
+      box-shadow: 0 4px 12px rgba(229, 193, 0, 0.8);
     }
 
     .button-icon {
       width: 32px;
       height: 32px;
       flex-shrink: 0;
+      fill: currentColor;
+      transition: fill 0.3s ease;
+    }
+
+    body.dark .button-icon {
       fill: currentColor;
     }
 
@@ -120,10 +127,21 @@
       color: #000;
     }
 
+    body.dark .theme-toggle {
+      border-color: var(--gold-hover);
+      color: var(--gold-hover);
+    }
+
+    body.dark .theme-toggle:hover {
+      background-color: var(--gold-hover);
+      color: #000;
+    }
+
     .footer {
       font-size: 0.85rem;
       color: #aaa;
       margin-top: 2rem;
+      transition: color 0.4s ease;
     }
 
     body.dark .footer {
@@ -154,9 +172,12 @@
   </div>
 
   <script>
+    // تم پیش‌فرض روشن است
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
     }
 
     function toggleTheme() {
