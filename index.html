@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sarv Media Group</title>
   <meta name="description" content="گروه رسانه‌ای سرو، ارائه بهترین محتواهای رسانه‌ای با تم تاریک و روشن قابل تغییر." />
+  <!-- فونت فارسی Vazir -->
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
   <style>
     :root {
       --bg-light: rgba(11, 46, 36, 0.8);
@@ -24,7 +26,7 @@
     html, body {
       margin: 0;
       padding: 0;
-      font-family: "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      font-family: "Vazir", "Helvetica Neue", Arial, sans-serif;
       background-color: var(--bg-light);
       color: var(--text-light);
       transition: background-color 0.4s ease, color 0.4s ease;
@@ -74,8 +76,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.4rem; /* فاصله کمتر بین لوگو و متن */
-      flex-direction: row-reverse; /* لوگو سمت چپ، متن سمت راست */
+      gap: 0.4rem;
+      flex-direction: row-reverse;
       background-color: var(--gold);
       color: #000;
       text-decoration: none;
@@ -94,7 +96,7 @@
     }
 
     .button-icon {
-      width: 32px; /* بزرگ‌تر */
+      width: 32px;
       height: 32px;
       flex-shrink: 0;
       fill: currentColor;
@@ -152,7 +154,6 @@
   </div>
 
   <script>
-    // بارگذاری تم از localStorage (اگر ذخیره شده)
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       document.body.classList.add('dark');
