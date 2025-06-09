@@ -1,65 +1,94 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sarv Media Group</title>
   <style>
+    :root {
+      --primary: #000;
+      --accent: #f5f5f7;
+      --gold: #FFD700;
+      --button-hover: #e5c100;
+    }
+
     body {
-      background-color: #0b2e24;
-      font-family: "Arial", sans-serif;
-      text-align: center;
-      color: #fff;
       margin: 0;
-      padding: 0;
+      font-family: "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--accent);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      direction: rtl;
     }
-    .container {
-      padding: 50px 20px;
+
+    .card {
+      background: white;
+      border-radius: 28px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      padding: 60px 30px;
+      max-width: 420px;
+      width: 90%;
+      transition: transform 0.3s ease;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
     .logo {
-      max-width: 220px;
-      margin-bottom: 40px;
-      filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
-    }
-    h1 {
-      font-size: 30px;
+      max-width: 160px;
       margin-bottom: 30px;
-      color: gold;
-      text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.6);
     }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #000;
+    }
+
+    p.description {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
     .button {
-      display: inline-block;
-      width: 260px;
-      margin: 15px;
-      padding: 15px;
-      background-color: gold;
-      color: #0b2e24;
+      display: block;
+      background-color: var(--gold);
+      color: #000;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.3s;
-      box-shadow: 0px 4px 6px rgba(255, 215, 0, 0.3);
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      margin: 12px 0;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
     }
+
     .button:hover {
-      background-color: #e6c200;
-      transform: scale(1.05);
+      background-color: var(--button-hover);
     }
+
     .footer {
-      margin-top: 70px;
-      font-size: 14px;
-      color: #ccc;
-      opacity: 0.8;
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://drive.google.com/thumbnail?id=11k8gbM4MGH3zSW7lItgsM_u2ClZVHRqR" alt="Sarv Media Group Logo" class="logo">
+  <div class="card">
+    <img src="https://drive.google.com/thumbnail?id=11k8gbM4MGH3zSW7lItgsM_u2ClZVHRqR" alt="لوگوی سرو" class="logo">
     <h1>به خانواده سرو خوش آمدید</h1>
+    <p class="description">رسانه‌ای نوین برای ارتباط هوشمندانه‌تر.</p>
     <a class="button" href="https://www.instagram.com/sarv.mediagroup?igsh=Njdwa3hwMjY2cTJo" target="_blank">صفحه اینستاگرام</a>
     <a class="button" href="https://t.me/Sarv_mediagroup" target="_blank">کانال تلگرام</a>
-    <div class="footer">با افتخار | Sarv Media Group</div>
+    <div class="footer">© 2025 Sarv Media Group | ساخته‌شده با عشق</div>
   </div>
 </body>
 </html>
