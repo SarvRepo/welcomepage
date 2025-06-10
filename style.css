@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Vazir';
+  src: url('./fonts/Vazir.woff2') format('woff2'),
+       url('./fonts/Vazir.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --bg-light: rgba(11, 46, 36, 0.8);
+  --bg-dark: #062b21;
+  --card-light: #ffffff;
+  --card-dark: #103f33;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+  --gold: #FFD700;
+  --gold-hover: #e5c100;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Vazir', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.wrapper {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  background-color: var(--card-light);
+  color: var(--text-light);
+  border-radius: 2rem;
+  padding: clamp(2rem, 5vw, 3rem);
+  width: clamp(280px, 90vw, 420px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+body.dark .card {
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+}
+
+.logo {
+  max-width: 180px;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 0.8rem;
+  width: 100%;
+  background-color: var(--gold);
+  color: #000;
+  text-decoration: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0.75rem 0;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.button:hover {
+  background-color: var(--gold-hover);
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.theme-toggle {
+  margin-top: 1.5rem;
+  background: none;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--gold);
+  color: #000;
+}
+
+.footer {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 2rem;
+}
+
+body.dark .footer {
+  color: #ccc;
+}
+
+.phone {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
